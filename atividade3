@@ -1,0 +1,21 @@
+@startuml
+|#pink|Cliente|
+start
+:Solicitar produto;
+|#gray|Venda|
+:Processar pedido;
+|Estoque|
+:Reunir Materiais;
+:Enviar pedido;
+|#gray|Venda|
+fork
+:Faturar cliente;
+forkagain
+|#pink|Cliente|
+:Receber pedido;
+endfork
+:Pagar fatura;
+|#gray|Venda|
+:Fechar pedido;
+stop
+@endumll
