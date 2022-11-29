@@ -1,0 +1,27 @@
+@startuml
+class escritorio{
+filial()
+central()
+}
+class cadastro{
+string endereço
+int telefone
+}
+class departamentos{
+funcionarios()
+}
+class funcionarios{
+string nome
+int codigo
+sting cargo
+int telefone
+string endereço
+string registros pessoais
+}
+
+escritorio - cadastro: cadastro de escritorios
+departamentos -- cadastro: cadastro de departamentos
+funcionarios *- cadastro: cadastro de funcionarios
+
+
+@enduml
